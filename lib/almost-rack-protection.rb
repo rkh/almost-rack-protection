@@ -12,7 +12,7 @@ module Almost
 
       def call(env)
         request = Rack::Request.new(env)
-        reply_for(request.scheme)
+        reply_for(request.scheme) or app.call(env)
       end
 
       private
@@ -31,7 +31,6 @@ module Almost
         when 'http'   then prevent!
         when 'https'  then prevent!
         when 'coffee' then [418, attack_headers, "I'm a teapot!"]
-        else app.call(env)
         end
       end
     end
