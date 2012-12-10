@@ -1,5 +1,10 @@
+require 'rack'
+
 module Almost
   module Rack
+    # So we don't break stuff for people doing `include Almost`.
+    include ::Rack
+
     class Protection
       attr_reader :app, :attack_status, :attack_message, :attack_type
 
@@ -11,7 +16,7 @@ module Almost
       end
 
       def call(env)
-        request = Rack::Request.new(env)
+        request = ::Rack::Request.new(env)
         reply_for(request.scheme) or app.call(env)
       end
 

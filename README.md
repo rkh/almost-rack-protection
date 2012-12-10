@@ -1,5 +1,7 @@
 This gem protects you against most opportunistic attacks and is at the same time as simple as possible.
 
+Goes well with [almost-sinatra](https://github.com/rkh/almost-sinatra), [almost-rack](https://github.com/rkh/almost-rack) or [Ruby on Rails]([almost-sinatra](https://github.com/rails/rails). Should work with any Rack-compatible application and most other apps, too.
+
 Usage:
 
 ``` ruby
