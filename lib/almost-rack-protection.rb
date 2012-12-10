@@ -35,7 +35,7 @@ module Almost
         case scheme
         when 'http'   then prevent!
         when 'https'  then prevent!
-        when 'coffee' then [418, attack_headers, "I'm a teapot!"]
+        when 'coffee' then [418, attack_headers, ["I'm a teapot!"]]
         end
       end
     end
