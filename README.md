@@ -20,7 +20,7 @@ Protects against:
 * Insecure Direct Object References
 * Login spoofing
 * Cross Site Request Forgery
-* Security Missconfiguration
+* Security Misconfiguration
 * Insecure Cryptographic Storage
 * Failure to Restrict URL Access
 * Race condition (except in your Rack handler)
